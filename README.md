@@ -40,6 +40,15 @@ The project's database is a result of combiing data from two distinct sources:
 
 All this data is ultimately merged and stored in a single table in the PostgreSQL database named `movies_full`.
 
+### Data access 
+[Access Movie Data Files](https://drive.google.com/drive/folders/1AK6cJD3qYW0cEgKjJSfpYNUuxLrEfaKK?usp=sharing)
+
+The raw datasets used in this project, as well as the processed CSV files that were ultimately uploaded to the PostgreSQL `movies_full` table, are available via Google Drive:
+- Raw Data: Original MovieLens CSV files (`movies.csv`, `links.csv`, `tags.csv`) and any other source files.
+- Processed Data: Filtered and consolidated CSV files used to populate the PostgreSQL database.
+
+**Note:** These files are provided for reproducibility. Ensure your PostgreSQL database is set up as per the project structure before running the scripts.
+
 ### Primary Database Schema (`movies_full`)
 The Gemini model is provided with the following table schema to inform its SQL generation:
 ```
