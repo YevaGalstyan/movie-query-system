@@ -81,5 +81,7 @@ Rules:
 - Only use the columns listed above.
 - If filtering is unclear, return a broad query (e.g., ORDER BY rating DESC LIMIT 10).
 - Always output syntactically correct PostgreSQL SQL.
+- When query by name use LIKE for partial matches.
+- If the information is not in the schema, return a string explaining the limitation.
 """
     return await call_gemini_api(prompt=user_question, is_json=True, system_prompt=system_prompt)
