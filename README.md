@@ -81,3 +81,14 @@ An experimental feature was developed to explore semantic search capabilities us
     4. A vector similarity search was performed using the standard `ORDER BY embedding <-> $1` (Euclidean distance) operator to find the most semantically similar movies.
 - **Status**:
     While technically implemented (`upload_embedding.py` and `db_utils.py's` query_movies_by_embedding), testing revealed that the results from the vector similarity search were not consistently accurate or relevant enough to provide a high-quality movie recommendation experience. Therefore, the primary functionality relies on the structured output of Gemini-generated SQL. The embedding feature is currently disabled in the main app.py chat flow but remains available for future iteration and refinement.
+
+## Additional Notes
+
+1. **Gemini API Credentials**  
+   A personal Gemini API key and URL must be added to the `config.py` file in order to connect to the model and enable query generation. Without these credentials, the application will not be able to execute intelligent SQL queries.
+
+2. **Test Queries and Results**  
+   The repository includes a `test.md` file demonstrating example queries, the LLM’s responses, and explanations of the outputs. This file can be used to validate the functionality and understand how the system interprets different prompts.
+
+3. **Project Paper**  
+   A short academic paper, `Movie_Query_System.pdf`, is included. It is a two-page document summarizing the project, methodology, and results, providing a concise reference for the system and its capabilities.
